@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from meetups.models import Speaker, Talk, Meetup
+
+
+class MeetupAdmin(admin.ModelAdmin):
+    list_display = ('title', 'date',)
+    search_fields = ['title']
+
+admin.site.register(Meetup, MeetupAdmin)
