@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from meetups.models import Speaker, Talk, Meetup
+from .models import Speaker, Talk, Meetup
 
 
 class MeetupAdmin(admin.ModelAdmin):
@@ -8,3 +8,7 @@ class MeetupAdmin(admin.ModelAdmin):
     search_fields = ['title']
 
 admin.site.register(Meetup, MeetupAdmin)
+
+admin.site.register(Speaker)
+
+admin.site.register(Talk)
