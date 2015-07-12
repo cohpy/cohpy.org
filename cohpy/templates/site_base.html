@@ -1,0 +1,48 @@
+{% load staticfiles %}
+
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+    <link rel="stylesheet" href="{% static 'css/foundation.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script src="{% static 'js/vendor/modernizr.js' %}"></script>
+  </head>
+  <body>
+
+    <div class="contain-to-grid sticky">
+      <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="#">Form Changes</a></h1>
+          </li>
+           <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+          <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li {% block pages_active %}{% endblock %}><a href="/pages/">All Pages</a></li>
+            <li {% block error_pages_active %}{% endblock %}><a href="/pages/error_pages/">Error Pages</a></li>
+            <li {% block forms_active %}{% endblock %}><a href="/forms/">All Forms</a></li>
+            <li {% block error_forms_active %}{% endblock %}><a href="/forms/error_forms/">Error Forms</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+    <div class="row">
+      {% block content %}
+      {% endblock %}
+    </div>
+    
+    <script src="{% static 'js/vendor/jquery.js' %}"></script>
+    <script src="{% static 'js/foundation.min.js' %}"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+td {
+  word-wrap: break-word;
+}
+
+th, td {
+  max-width: 550px;
+}
+
+.long-url th,
+.long-url td {
+  max-width: 1000px;
+}
+
+.med-url {
+  max-width: 887px;
+}
