@@ -15,9 +15,6 @@ import environ
 ROOT_DIR = environ.Path(__file__) - 3  # (/a/b/myfile.py - 3 = /)
 APPS_DIR = ROOT_DIR
 
-print('ROOT_DIR',ROOT_DIR)
-print('APPS_DIR', APPS_DIR)
-
 env = environ.Env()
 
 # Quick-start development settings - unsuitable for production
@@ -122,7 +119,6 @@ USE_TZ = True
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#static-root
 STATIC_ROOT = str(ROOT_DIR('staticfiles'))
-print('STATIC_ROOT', STATIC_ROOT)
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#static-url
 STATIC_URL = '/static/'
@@ -131,8 +127,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     str(APPS_DIR.path('static')),
 )
-
-print('STATICFILES_DIRS', STATICFILES_DIRS)
 
 # See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#staticfiles-finders
 STATICFILES_FINDERS = (
