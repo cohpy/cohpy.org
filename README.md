@@ -1,4 +1,4 @@
-# COhpy.org website
+# COhPy.org website
 
 To run the development server, navigate to the ```cohpy``` directory and run:
 
