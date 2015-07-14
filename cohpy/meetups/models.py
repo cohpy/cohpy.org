@@ -18,6 +18,10 @@ class Talk(models.Model):
     description = models.TextField(blank=True)
     speakers = models.ManyToManyField(Speaker)
 
+    def safe_description(self):
+        '''http://stackoverflow.com/questions/2080559/disable-html-escaping-in-djangos-textfield''' 
+        return mark_safe(self.description)
+
     def __str__(self):
         return self.title
 
@@ -33,7 +37,6 @@ class Meetup(models.Model):
     talks = models.ManyToManyField(Talk)
     
     def safe_description(self):
-        '''http://stackoverflow.com/questions/2080559/disable-html-escaping-in-djangos-textfield''' 
         return mark_safe(self.description)
 
     def safe_location(self):
@@ -44,6 +47,4 @@ class Meetup(models.Model):
 
     class Meta:
         ordering = ('date',)
-
-
 
