@@ -6,7 +6,7 @@ from meetups.models import Speaker, Talk, Meetup
 
 # For reference: https://pytest.org/latest/fixture.html#fixture
 # http://www.pydanny.com/pytest-no-boilerplate-testing-2.html
-@pytest.fixture # setup and teardown
+@pytest.fixture
 def speaker():
     kwargs = {
         'name': 'Test User',
@@ -14,10 +14,51 @@ def speaker():
     }
     return Speaker.objects.create(**kwargs)
 
+@pytest.fixture
+def talk(speaker):
+    kwargs = {
+        'title': 'Test talk',
+        'description': 'Test talk description',
+    }
+    t = Talk.objects.create(**kwargs)
+    t.speakers.add(speaker)
+    return t
+
+@pytest.fixture
+def meetup(talk):
+    kwargs = {
+        'title': 'Test meetup',
+        'description': '<p>Test meetup description</p>',
+        'date': timezone.now(),
+        'location': '<p>Test meetup location</p>'
+    }
+    m = Meetup.objects.create(**kwargs)
+    m.talks.add(talk)
+    return m
+
 @pytest.mark.django_db
 def test_speaker_creation(speaker):
-    s = speaker
+    assert isinstance(speaker, Speaker)
+    assert speaker.__str__() ==  'Test User'
 
-    assert isinstance(s, Speaker)
-    assert s.__str__() ==  'Test User'    
+@pytest.mark.django_db
+def test_talk_creation(talk):
+    assert isinstance(talk, Talk)
+    assert talk.__str__() ==  'Test talk'
 
+@pytest.mark.django_db
+def test_talk_safe_description(talk):
+    assert str(type(talk.safe_description())) == "<class 'django.utils.safestring.SafeText'>"
+
+@pytest.mark.django_db
+def test_meetup_creation(meetup):
+    assert isinstance(meetup, Meetup)
+    assert meetup.__str__() ==  'Test meetup'    
+
+@pytest.mark.django_db
+def test_meetup_safe_description(meetup):
+    assert str(type(meetup.safe_description())) == "<class 'django.utils.safestring.SafeText'>"
+
+@pytest.mark.django_db
+def test_meetup_safe_location(meetup):
+    assert str(type(meetup.safe_location())) == "<class 'django.utils.safestring.SafeText'>"

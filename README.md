@@ -6,7 +6,7 @@ To run the development server, navigate to the ```cohpy``` directory and run:
 $ python manage.py runserver
 ```
 
-To run all tests:
+To run all tests (from the cohpy directory):
 
 ```
 $ py.test -v
