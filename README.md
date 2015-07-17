@@ -1,6 +1,6 @@
-![](https://travis-ci.org/cohpy/cohpy.org.svg?branch=master)
 
-# COhPy.org website
+
+# COhPy.org website&nbsp;&nbsp;&nbsp;![](https://travis-ci.org/cohpy/cohpy.org.svg?branch=master)
 
 In order to develop locally, please set a SECRET_KEY in your .bash_profile:
 
