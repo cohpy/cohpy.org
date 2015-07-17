@@ -1,5 +1,12 @@
 # COhPy.org website
 
+In order to develop locally, please set a SECRET_KEY in your .bash_profile:
+
+```
+SECRET_KEY='your secret key'
+export SECRET_KEY
+```
+
 To run the development server, navigate to the ```cohpy``` directory and run:
 
 ```

@@ -1,8 +1,10 @@
+import os
+
 from .base import *
 
 
 DEBUG = True
-SECRET_KEY = 'Some kinda secret'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
