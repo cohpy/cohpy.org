@@ -1,4 +1,4 @@
-https://travis-ci.org/cohpy/cohpy.org.svg?branch=master
+!(https://travis-ci.org/cohpy/cohpy.org.svg?branch=master)
 
 # COhPy.org website
 
