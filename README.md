@@ -1,3 +1,5 @@
+https://travis-ci.org/cohpy/cohpy.org.svg?branch=master
+
 # COhPy.org website
 
 In order to develop locally, please set a SECRET_KEY in your .bash_profile:
