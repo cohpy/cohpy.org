@@ -6,11 +6,12 @@ python:
 install: "pip install -r requirements.txt"
 
 before_script:
-  - psql -c 'create database cohpy;' -U postgres
+  - psql -c "create database cohpy;" -U postgres
+  - "python manage.py migrate"
   - "cd cohpy"
   - "python manage.py runserver"
-  - sleep 3 # give Web server some time to bind to sockets, etc
 
 # command to run tests
 script:
+  - "cd cohpy"
   - "py.test -v"
