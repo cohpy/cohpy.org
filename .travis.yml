@@ -5,5 +5,12 @@ python:
 # command to install dependencies
 install: "pip install -r requirements.txt"
 
+before_script:
+  - psql -c "create database cohpy;" -U postgres
+  - "cd cohpy"
+  - "python manage.py migrate"  
+  - "nohup python manage.py runserver &"
+
 # command to run tests
-script: "cd cohpy; py.test meetups"
+script:
+  - "py.test -v"
