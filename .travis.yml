@@ -6,13 +6,13 @@ python:
 install: "pip install -r requirements.txt"
 
 before_script:
-  - "sh -e"
   - psql -c "create database cohpy;" -U postgres
   - "cd cohpy"
   - "python manage.py migrate"  
-  - "python manage.py runserver"
+  - "nohup python manage.py runserver &"
 
 # command to run tests
 script:
+  - ""
   - "cd cohpy"
   - "py.test -v"
