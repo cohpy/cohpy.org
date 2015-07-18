@@ -5,5 +5,11 @@ python:
 # command to install dependencies
 install: "pip install -r requirements.txt"
 
+before_script:
+  - "cd cohpy"
+  - "python manage.py runserver"
+  - sleep 3 # give Web server some time to bind to sockets, etc
+
 # command to run tests
-script: "cd cohpy; py.test meetups"
+script:
+  - "py.test -v"
