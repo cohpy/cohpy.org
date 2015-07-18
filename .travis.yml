@@ -14,5 +14,4 @@ before_script:
 # command to run tests
 script:
   - ""
-  - "cd cohpy"
   - "py.test -v"
