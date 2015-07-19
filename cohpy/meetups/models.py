@@ -29,12 +29,23 @@ class Talk(models.Model):
         ordering = ('title',)
 
 
+class MeetupType(models.Model):
+    name = models.CharField(max_length=64, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        ordering = ('name',)
+
+
 class Meetup(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
     date = models.DateTimeField()
     location = models.TextField(blank=True)    
     talks = models.ManyToManyField(Talk)
+    meetup_type = models.ForeignKey(MeetupType)
     
     def safe_description(self):
         return mark_safe(self.description)

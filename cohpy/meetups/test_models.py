@@ -1,7 +1,7 @@
 from django.utils import timezone
 import pytest
 
-from meetups.models import Speaker, Talk, Meetup
+from meetups.models import Speaker, Talk, MeetupType, Meetup
 
 
 # For reference: https://pytest.org/latest/fixture.html#fixture
@@ -25,11 +25,18 @@ def talk(speaker):
     return t
 
 @pytest.fixture
-def meetup(talk):
+def meetup_type():
+    t = MeetupType(name='monthly')
+    t.save()
+    return t
+
+@pytest.fixture
+def meetup(talk, meetup_type):
     kwargs = {
         'title': 'Test meetup',
         'description': '<p>Test meetup description</p>',
         'date': timezone.now(),
+        'meetup_type': meetup_type,
         'location': '<p>Test meetup location</p>'
     }
     m = Meetup.objects.create(**kwargs)
@@ -45,6 +52,11 @@ def test_speaker_creation(speaker):
 def test_talk_creation(talk):
     assert isinstance(talk, Talk)
     assert talk.__str__() ==  'Test talk'
+
+@pytest.mark.django_db
+def test_meetup_type_creation(meetup_type):
+    assert isinstance(meetup_type, MeetupType)
+    assert meetup_type.__str__() ==  'monthly'
 
 @pytest.mark.django_db
 def test_talk_safe_description(talk):
