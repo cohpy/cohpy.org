@@ -16,8 +16,11 @@ Including another URLconf
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
+from meetups import views
+
 
 urlpatterns = patterns('',
+    url(r'^$', views.home_page, name='home'),
     url(r'^meetups/', include('meetups.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
