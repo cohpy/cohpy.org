@@ -1,10 +1,12 @@
 # COhPy.org website
 
-In order to develop locally, please set a SECRET_KEY in your .bash_profile:
+In order to develop locally, please set a ```SECRET_KEY``` and ```BROWSER``` in your .bash_profile (If ```BROWSER='HEADLESS'```, then the functional tests will run with PhantomJS, otherwise they default to Firefox:
 
 ```
 SECRET_KEY='your secret key'
 export SECRET_KEY
+BROWSER='FIREFOX'
+export BROWSER
 ```
 
 To run the development server, navigate to the ```cohpy``` directory and run:
