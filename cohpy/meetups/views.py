@@ -4,8 +4,8 @@ from django.http import HttpResponse
 from django.template import RequestContext, loader
 
 
-def home_page(reauest):
-    return HttpResponse('<html><title>COhPy | Home</title></html>')
+def home_page(request):
+    return render(request, 'home.html')
 
 def index(request):
     return render(request, 'meetups/index.html',)
