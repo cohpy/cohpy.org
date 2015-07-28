@@ -1,16 +1,47 @@
-td {
-  word-wrap: break-word;
+h1, h2, h3, h4, h5, h6 {
+  color: #3E409E;
 }
 
-th, td {
-  max-width: 550px;
+.contain-to-grid {
+  background: #A5E26D
 }
 
-.long-url th,
-.long-url td {
-  max-width: 1000px;
+.top-bar {
+  background: #A5E26D;
+  height: 3.8125rem;
+  line-height: 3.8125rem;
+  padding-top: 0.5rem;
+  margin-bottom: 1em;
 }
 
-.med-url {
-  max-width: 887px;
+.top-bar-section li:not(.has-form) a:not(.button) {
+  background: #A5E26D
+}
+
+.top-bar-section li:not(.has-form) a:not(.button):hover {
+  background: #A5E26D
+}
+
+.top-bar .name h1 {
+  font-size: 2.0625rem;
+}
+
+.top-bar .name h1 a {
+  padding: 0 1rem;
+}
+
+.top-bar-section ul li > a {
+  font-size: 1.1rem;
+}
+
+@media only screen and (min-width: 58.75em) {
+  .contain-to-grid .top-bar {
+    margin-bottom: 1em;
+  }
+}
+
+@media only screen and (min-width: 40.0625em) {
+  .container {
+    padding: 0 1rem;
+  }  
 }
