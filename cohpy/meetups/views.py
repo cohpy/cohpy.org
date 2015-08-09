@@ -5,7 +5,7 @@ from django.template import RequestContext, loader
 
 
 def home_page(request):
-    return render(request, 'meetups/home.html')
+    return render(request, 'home.html')
 
 def index(request):
     return render(request, 'meetups/index.html',)

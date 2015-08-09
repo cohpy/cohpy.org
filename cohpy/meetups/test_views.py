@@ -12,5 +12,5 @@ def test_root_url_resolves_to_home_page():
 def test_home_page_returns_correct_html():
     request = HttpRequest()
     response = home_page(request)
-    expected_html = render_to_string('meetups/home.html')
+    expected_html = render_to_string('home.html')
     assert response.content.decode() == expected_html
