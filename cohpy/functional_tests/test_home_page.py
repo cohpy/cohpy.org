@@ -13,4 +13,4 @@ def test_navigates_to_home_page(browser):
     assert 'COhPy' in header_text
 
     subheader_text = browser.find_element_by_tag_name('h2').text
-    assert 'Upcoming Meetups' in subheader_text
+    assert "The Central Ohio Python User's Group" in subheader_text

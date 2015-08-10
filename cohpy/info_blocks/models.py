@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.safestring import mark_safe
 
 
-class GeneralInfo(models.Model):
+class GeneralInfoBlock(models.Model):
     info_text = models.TextField()
     date = models.DateTimeField()
     
@@ -15,4 +15,17 @@ class GeneralInfo(models.Model):
 
     class Meta:
         ordering = ('date',)
-        
+
+
+class DojoInfoBlock(models.Model):
+    info_text = models.TextField()
+    date = models.DateTimeField()
+    
+    def safe_info_text(self):
+        return mark_safe(self.info_text)
+    
+    def __str__(self):
+        return self.date
+
+    class Meta:
+        ordering = ('date',)
