@@ -47,6 +47,7 @@ LOCAL_APPS = (
     # 'cohpy.users', 
     'meetups',
     'info_blocks',
+    'python_resources',
 )
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS

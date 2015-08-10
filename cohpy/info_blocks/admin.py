@@ -1,10 +1,17 @@
 from django.contrib import admin
 
-from .models import GeneralInfo
+from .models import GeneralInfoBlock, DojoInfoBlock
 
 
-class GeneralInfoAdmin(admin.ModelAdmin):
+class GeneralInfoBlockAdmin(admin.ModelAdmin):
     list_display = ('date',)
     search_fields = ['info_text']
 
-admin.site.register(GeneralInfo, GeneralInfoAdmin)
+admin.site.register(GeneralInfoBlock, GeneralInfoBlockAdmin)
+
+
+class DojoInfoBlockAdmin(admin.ModelAdmin):
+    list_display = ('date',)
+    search_fields = ['info_text']
+
+admin.site.register(DojoInfoBlock, DojoInfoBlockAdmin)
