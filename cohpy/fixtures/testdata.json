@@ -1,0 +1,82 @@
+[
+{
+  "pk": 1,
+  "fields": {
+    "date_added": "2015-08-10T23:22:21Z",
+    "name": "Jason Green"
+  },
+  "model": "meetups.speaker"
+},
+{
+  "pk": 2,
+  "fields": {
+    "date_added": "2015-08-11T01:08:14Z",
+    "name": "Raymond Chandler"
+  },
+  "model": "meetups.speaker"
+},
+{
+  "pk": 1,
+  "fields": {
+    "speakers": [
+      1
+    ],
+    "description": "<p>This month, Jason Green will be presenting on CI, Docker, and how not to implement a continuous deployment model.</p> \r\n\r\n<p>Questing for the continuous-deployment grail, Jason has had plenty of pit and prat falls. Perhaps others can learn from his mistakes and do as he didn't. This talk will demonstrate how [not] to stitch together Docker, Compose, Machine, Boot2Docker, YAML, CircleCI, EC2, Route53, and likely a few other tools into a simple yet automated code -> commit -> review -> deploy process.</p> ",
+    "title": "CI your Python app with Docker"
+  },
+  "model": "meetups.talk"
+},
+{
+  "pk": 2,
+  "fields": {
+    "speakers": [
+      2
+    ],
+    "description": "<p>Raymond Chandler will be speaking on behavior driven development in Python.</p>\r\n\r\n<p>Behavior-driven development (or BDD) is an agile software development technique that encourages collaboration between developers, QA and non-technical or business participants in a software project. Behave uses tests written in a natural language style, backed up by Python code.</p>\r\n\r\n<p>Raymond will teach you how to easily beef up your integrations tests using Python and Gherkin with the Behave BDD Framework. Testing doesn\u2019t have to be hard. Behave makes it easy and fun. </p>",
+    "title": "Feature tests for the feature driven, BDD style"
+  },
+  "model": "meetups.talk"
+},
+{
+  "pk": 2,
+  "fields": {
+    "name": "monthly"
+  },
+  "model": "meetups.meetuptype"
+},
+{
+  "pk": 3,
+  "fields": {
+    "name": "dojo"
+  },
+  "model": "meetups.meetuptype"
+},
+{
+  "pk": 1,
+  "fields": {
+    "date": "2015-06-29T18:00:00Z",
+    "description": "<p>The informal meeting will begin at 6:00pm, with the formal presentation starting promptly at 6:30pm. We will adjourn no later than 8:30pm.</p>",
+    "location": "<p><a href=\"https://www.google.com/maps/place/Pillar+Technology+Group+LLC/@39.9748601,-82.9976732,15z/data=!4m2!3m1!1s0x0:0xd0c230a717d372f2\">Pillar at the Smith Brother's Building</a></p>",
+    "meetup_type": 2,
+    "talks": [
+      1
+    ],
+    "title": "June Monthly Meeting"
+  },
+  "model": "meetups.meetup"
+},
+{
+  "pk": 2,
+  "fields": {
+    "date": "2015-06-01T18:00:00Z",
+    "description": "<p>Due to the Memorial Day holiday, we will be meeting a week later on June 1. Yes, it is still our May meeting :-D.</p>\r\n\r\n</p>The informal meeting will begin at 6:00pm, with the formal presentation starting promptly at 6:30pm.</p>",
+    "location": "<p><a href=\"https://www.google.com/maps/place/Pillar+Technology+Group+LLC/@39.9748601,-82.9976732,15z/data=!4m2!3m1!1s0x0:0xd0c230a717d372f2\">Pillar at the Smith Brother's Building</a></p>",
+    "meetup_type": 2,
+    "talks": [
+      2
+    ],
+    "title": "May Monthly Meeting"
+  },
+  "model": "meetups.meetup"
+}
+]
