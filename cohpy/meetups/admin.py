@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Speaker, Talk, Meetup
+from .models import Speaker, Talk, Meetup, MeetupType
 
 
 class MeetupAdmin(admin.ModelAdmin):
@@ -12,3 +12,5 @@ admin.site.register(Meetup, MeetupAdmin)
 admin.site.register(Speaker)
 
 admin.site.register(Talk)
+
+admin.site.register(MeetupType)
