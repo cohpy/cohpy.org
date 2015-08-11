@@ -5,6 +5,21 @@
 
 {% block content %}
   <div class="small-12 columns">
-    <h2>The Central Ohio Python User's Group</h2>
-  </div>  
+    <h2 class="site-title">The Central Ohio Python User's Group</h2>
+  </div>
+  <div class="small-6 columns" id="next-meetup">
+    <h3>{{ latest_meetup.title }}</h3>
+    <p>{{ latest_meetup.date }}</p>
+    {{ latest_meetup.safe_location }}
+    {{ latest_meetup.safe_description }}
+    
+    {% for talk in latest_meetup.talks.all %}
+      <h4>{{ talk.title }}</h4>
+      {% for speaker in talk.speakers.all %}
+        <h5>{{ speaker.name }}</h5>
+      {% endfor %}
+      {{ talk.safe_description }}
+    {% endfor %}
+  </div>
+
 {% endblock %}

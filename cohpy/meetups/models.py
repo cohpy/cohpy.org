@@ -30,7 +30,7 @@ class Talk(models.Model):
 
 
 class MeetupType(models.Model):
-    name = models.CharField(max_length=64, blank=True)
+    name = models.CharField(max_length=64, default='monthly')
 
     def __str__(self):
         return self.name

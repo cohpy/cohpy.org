@@ -25,14 +25,14 @@ def test_talk_safe_description(talk):
     assert str(type(talk.safe_description())) == "<class 'django.utils.safestring.SafeText'>"
 
 @pytest.mark.django_db
-def test_meetup_creation(meetup):
-    assert isinstance(meetup, Meetup)
-    assert meetup.__str__() ==  'Test meetup'    
+def test_meetup_creation(meetup1):
+    assert isinstance(meetup1, Meetup)
+    assert meetup1.__str__() ==  'Test meetup1'    
 
 @pytest.mark.django_db
-def test_meetup_safe_description(meetup):
-    assert str(type(meetup.safe_description())) == "<class 'django.utils.safestring.SafeText'>"
+def test_meetup_safe_description(meetup1):
+    assert str(type(meetup1.safe_description())) == "<class 'django.utils.safestring.SafeText'>"
 
 @pytest.mark.django_db
-def test_meetup_safe_location(meetup):
-    assert str(type(meetup.safe_location())) == "<class 'django.utils.safestring.SafeText'>"
+def test_meetup_safe_location(meetup1):
+    assert str(type(meetup1.safe_location())) == "<class 'django.utils.safestring.SafeText'>"

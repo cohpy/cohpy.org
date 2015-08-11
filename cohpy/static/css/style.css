@@ -2,8 +2,23 @@ h1, h2, h3, h4, h5, h6 {
   color: #3E409E;
 }
 
-.contain-to-grid {
-  background: #A5E26D
+h2.site-title {
+  margin-bottom: 2rem;
+}
+
+p a {
+  color: #3E409E;
+}
+
+p a:hover {
+  color: #3E409E;
+  text-decoration: underline;
+}
+
+.contain-to-grid, .top-bar {
+  background: #A5E26D;
+  height: 3.8125rem;
+  margin-bottom: 1em;
 }
 
 .top-bar {
@@ -32,6 +47,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .top-bar-section ul li > a {
   font-size: 1.1rem;
+}
+
+#next-meetup {
+  padding: 12px 16px 1px;
+  background: #F1F1FD;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  border-radius: 5px;
 }
 
 @media only screen and (min-width: 58.75em) {
