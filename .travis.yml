@@ -9,7 +9,6 @@ before_script:
   - psql -c "create database cohpy;" -U postgres
   - "cd cohpy"
   - "python manage.py migrate" 
-  - "python manage.py loaddata testdata.json" 
   - "nohup python manage.py runserver &"
 
 # command to run tests
