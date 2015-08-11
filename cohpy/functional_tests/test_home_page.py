@@ -12,8 +12,8 @@ from meetups.models import Speaker, Talk, MeetupType, Meetup
 #  And they should see all upcoming meetups
 #  And they should see links to past meetups
 
-@pytest.mark.django_db
-def test_navigates_to_home_page(browser, meetup):
+# @pytest.mark.django_db
+def test_navigates_to_home_page(browser):
     browser.get('http://localhost:8000/')
     assert 'COhPy | Home' in browser.title
 

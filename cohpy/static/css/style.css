@@ -15,8 +15,10 @@ p a:hover {
   text-decoration: underline;
 }
 
-.contain-to-grid {
-  background: #A5E26D
+.contain-to-grid, .top-bar {
+  background: #A5E26D;
+  height: 3.8125rem;
+  margin-bottom: 1em;
 }
 
 .top-bar {
