@@ -50,7 +50,7 @@ Open the report in a browser ```htmlcov/index.html```.
 To create fixture data to be used in tests:
 
 ```
-python manage.py dumpdata meetups python_resources info_blocks --indent 2 > fixtures/testdata.json
+$ python manage.py dumpdata meetups python_resources info_blocks --indent 2 > fixtures/testdata.json
 ```
 
 ### References:

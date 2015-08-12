@@ -73,6 +73,7 @@ p a:hover {
 
   .top-bar-section li.active:not(.has-form) a:not(.button):hover {
     background: #6062B1;
+    background: #343688;
   }
 
   .contain-to-grid .top-bar {

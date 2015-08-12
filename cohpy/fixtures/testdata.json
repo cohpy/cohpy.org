@@ -1,181 +1,181 @@
 [
 {
-  "model": "meetups.speaker",
   "fields": {
-    "date_added": "2015-08-10T23:22:21Z",
-    "name": "Jason Green"
+    "name": "Jason Green",
+    "date_added": "2015-08-10T23:22:21Z"
   },
-  "pk": 1
+  "pk": 1,
+  "model": "meetups.speaker"
 },
 {
-  "model": "meetups.speaker",
   "fields": {
-    "date_added": "2015-08-11T01:08:14Z",
-    "name": "Raymond Chandler"
+    "name": "Raymond Chandler",
+    "date_added": "2015-08-11T01:08:14Z"
   },
-  "pk": 2
+  "pk": 2,
+  "model": "meetups.speaker"
 },
 {
-  "model": "meetups.speaker",
   "fields": {
-    "date_added": "2015-08-12T01:53:58Z",
-    "name": "Rob Kinyon"
+    "name": "Rob Kinyon",
+    "date_added": "2015-08-12T01:53:58Z"
   },
-  "pk": 3
+  "pk": 3,
+  "model": "meetups.speaker"
 },
 {
-  "model": "meetups.speaker",
   "fields": {
-    "date_added": "2015-08-12T02:03:38Z",
-    "name": "Various"
+    "name": "Various",
+    "date_added": "2015-08-12T02:03:38Z"
   },
-  "pk": 4
+  "pk": 4,
+  "model": "meetups.speaker"
 },
 {
-  "model": "meetups.speaker",
   "fields": {
-    "date_added": "2015-08-12T02:14:33Z",
-    "name": "Jim Reed"
+    "name": "Jim Reed",
+    "date_added": "2015-08-12T02:14:33Z"
   },
-  "pk": 5
+  "pk": 5,
+  "model": "meetups.speaker"
 },
 {
-  "model": "meetups.talk",
   "fields": {
-    "description": "<p>This month, Jason Green will be presenting on CI, Docker, and how not to implement a continuous deployment model.</p> \r\n\r\n<p>Questing for the continuous-deployment grail, Jason has had plenty of pit and prat falls. Perhaps others can learn from his mistakes and do as he didn't. This talk will demonstrate how [not] to stitch together Docker, Compose, Machine, Boot2Docker, YAML, CircleCI, EC2, Route53, and likely a few other tools into a simple yet automated code -> commit -> review -> deploy process.</p> ",
-    "title": "CI your Python app with Docker",
     "speakers": [
       1
-    ]
+    ],
+    "title": "CI your Python app with Docker",
+    "description": "<p>This month, Jason Green will be presenting on CI, Docker, and how not to implement a continuous deployment model.</p> \r\n\r\n<p>Questing for the continuous-deployment grail, Jason has had plenty of pit and prat falls. Perhaps others can learn from his mistakes and do as he didn't. This talk will demonstrate how [not] to stitch together Docker, Compose, Machine, Boot2Docker, YAML, CircleCI, EC2, Route53, and likely a few other tools into a simple yet automated code -> commit -> review -> deploy process.</p> "
   },
-  "pk": 1
+  "pk": 1,
+  "model": "meetups.talk"
 },
 {
-  "model": "meetups.talk",
   "fields": {
-    "description": "<p>Raymond Chandler will be speaking on behavior driven development in Python.</p>\r\n\r\n<p>Behavior-driven development (or BDD) is an agile software development technique that encourages collaboration between developers, QA and non-technical or business participants in a software project. Behave uses tests written in a natural language style, backed up by Python code.</p>\r\n\r\n<p>Raymond will teach you how to easily beef up your integrations tests using Python and Gherkin with the Behave BDD Framework. Testing doesn\u2019t have to be hard. Behave makes it easy and fun. </p>",
-    "title": "Feature tests for the feature driven, BDD style",
     "speakers": [
       2
-    ]
+    ],
+    "title": "Feature tests for the feature driven, BDD style",
+    "description": "<p>Raymond Chandler will be speaking on behavior driven development in Python.</p>\r\n\r\n<p>Behavior-driven development (or BDD) is an agile software development technique that encourages collaboration between developers, QA and non-technical or business participants in a software project. Behave uses tests written in a natural language style, backed up by Python code.</p>\r\n\r\n<p>Raymond will teach you how to easily beef up your integrations tests using Python and Gherkin with the Behave BDD Framework. Testing doesn\u2019t have to be hard. Behave makes it easy and fun. </p>"
   },
-  "pk": 2
+  "pk": 2,
+  "model": "meetups.talk"
 },
 {
-  "model": "meetups.talk",
   "fields": {
-    "description": "<p>This month, Rob Kinyon will be presenting on configuration management with Python and Salt: </p>\r\n\r\n<p>Chef and Puppet own the mindshare for configuration management tools. But, they suck, for a variety of reasons. Salt doesn't suck. Again, for a variety of reasons, some of which are related to the Python view on life. And it's extendable in Python.</p>\r\n<ul>\r\n<li>Why do I want to use Salt at all?</li>\r\n\r\n<li>How do I even think about Salt?</li>\r\n\r\n<li>How do I use Salt?</li>\r\n\r\n<li>How do I fit Salt into my project?</li>\r\n\r\n<li>How do I extend Salt?</li>\r\n\r\n<p>Devops is a very complex process. At the heart is an idempotent state management system. Like Chef, Puppet, or . . . Salt. But, it's really easy to use these tools in a way that doesn't leverage their strengths. That's dumb - let's fix that.</p>",
-    "title": "Configuration Management With Python and Salt",
     "speakers": [
       3
-    ]
+    ],
+    "title": "Configuration Management With Python and Salt",
+    "description": "<p>This month, Rob Kinyon will be presenting on configuration management with Python and Salt: </p>\r\n\r\n<p>Chef and Puppet own the mindshare for configuration management tools. But, they suck, for a variety of reasons. Salt doesn't suck. Again, for a variety of reasons, some of which are related to the Python view on life. And it's extendable in Python.</p>\r\n\r\n<ul>\r\n<li>Why do I want to use Salt at all?</li>\r\n<li>How do I even think about Salt?</li>\r\n<li>How do I use Salt?</li>\r\n<li>How do I fit Salt into my project?</li>\r\n<li>How do I extend Salt?</li>\r\n</ul>\r\n\r\n<p>Devops is a very complex process. At the heart is an idempotent state management system. Like Chef, Puppet, or . . . Salt. But, it's really easy to use these tools in a way that doesn't leverage their strengths. That's dumb - let's fix that.</p>"
   },
-  "pk": 3
+  "pk": 3,
+  "model": "meetups.talk"
 },
 {
-  "model": "meetups.talk",
   "fields": {
-    "description": "<p>Rob Kinyon's talk on \"Configuration Management with Python and Salt\" has been moved to next month's meeting. This month we will have lightening talks and give presenters a chance to practice their PyOhio talks.</p>",
-    "title": "Lightening Talks",
     "speakers": [
       4
-    ]
+    ],
+    "title": "Lightening Talks",
+    "description": "<p>Rob Kinyon's talk on \"Configuration Management with Python and Salt\" has been moved to next month's meeting. This month we will have lightening talks and give presenters a chance to practice their PyOhio talks.</p>"
   },
-  "pk": 4
+  "pk": 4,
+  "model": "meetups.talk"
 },
 {
-  "model": "meetups.talk",
   "fields": {
-    "description": "<p>This month, Professor Jim Reed will be talking about \"Making Even Better Decisions in Python -- Using IFs with Supporting Assertions\".</p>\r\n\r\n<p>This talk is for both new Python programmers and old, and you will learn both about the syntax of Python as well as how to code better regardless of your language of choice.</p>\r\n\r\n<p>While offering the NASA/JPL Coding Standards as a backdrop to this presentation--an attempt is made to adhere to these strict standards as Pythonists to develop clean coding habits and better decision making in their Python code. A brief overview of using Python IFs are correctly demonstrated in Python Code according to the NASA Standards presented earlier. A possible pseudo Case/Select Class is explored together as an alternative to Python IFs, but just might not past the test of meeting these self imposed coding standards. And finally, an introduction to the Python Assert Statement is provided with correct usage and demonstrating the suitable usefulness of Assertions for better program design from the beginning of your very next programming project.</p>\r\n",
-    "title": "Making Even Better Decisions in Python",
     "speakers": [
       5
-    ]
+    ],
+    "title": "Making Even Better Decisions in Python",
+    "description": "<p>This month, Professor Jim Reed will be talking about \"Making Even Better Decisions in Python -- Using IFs with Supporting Assertions\".</p>\r\n\r\n<p>This talk is for both new Python programmers and old, and you will learn both about the syntax of Python as well as how to code better regardless of your language of choice.</p>\r\n\r\n<p>While offering the NASA/JPL Coding Standards as a backdrop to this presentation--an attempt is made to adhere to these strict standards as Pythonists to develop clean coding habits and better decision making in their Python code. A brief overview of using Python IFs are correctly demonstrated in Python Code according to the NASA Standards presented earlier. A possible pseudo Case/Select Class is explored together as an alternative to Python IFs, but just might not past the test of meeting these self imposed coding standards. And finally, an introduction to the Python Assert Statement is provided with correct usage and demonstrating the suitable usefulness of Assertions for better program design from the beginning of your very next programming project.</p>\r\n"
   },
-  "pk": 5
+  "pk": 5,
+  "model": "meetups.talk"
 },
 {
-  "model": "meetups.meetuptype",
   "fields": {
     "name": "monthly"
   },
-  "pk": 2
+  "pk": 2,
+  "model": "meetups.meetuptype"
 },
 {
-  "model": "meetups.meetuptype",
   "fields": {
     "name": "dojo"
   },
-  "pk": 3
+  "pk": 3,
+  "model": "meetups.meetuptype"
 },
 {
-  "model": "meetups.meetup",
   "fields": {
-    "meetup_type": 2,
     "location": "<p><a href=\"https://www.google.com/maps/place/Pillar+Technology+Group+LLC/@39.9748601,-82.9976732,15z/data=!4m2!3m1!1s0x0:0xd0c230a717d372f2\">Pillar at the Smith Brother's Building</a></p>",
+    "meetup_type": 2,
+    "date": "2015-06-29T18:00:00Z",
     "title": "June Monthly Meeting",
+    "description": "<p>The informal meeting will begin at 6:00pm, with the formal presentation starting promptly at 6:30pm. We will adjourn no later than 8:30pm to Brazenhead for the after-meeting.</p>",
     "talks": [
       1
-    ],
-    "description": "<p>The informal meeting will begin at 6:00pm, with the formal presentation starting promptly at 6:30pm. We will adjourn no later than 8:30pm to Brazenhead for the after-meeting.</p>",
-    "date": "2015-06-29T18:00:00Z"
+    ]
   },
-  "pk": 1
+  "pk": 1,
+  "model": "meetups.meetup"
 },
 {
-  "model": "meetups.meetup",
   "fields": {
-    "meetup_type": 2,
     "location": "<p><a href=\"https://www.google.com/maps/place/Pillar+Technology+Group+LLC/@39.9748601,-82.9976732,15z/data=!4m2!3m1!1s0x0:0xd0c230a717d372f2\">Pillar at the Smith Brother's Building</a></p>",
+    "meetup_type": 2,
+    "date": "2015-06-01T18:00:00Z",
     "title": "May Monthly Meeting",
+    "description": "<p>Due to the Memorial Day holiday, we will be meeting a week later on June 1. Yes, it is still our May meeting :-D.</p>\r\n\r\n<p>The informal meeting will begin at 6:00pm, with the formal presentation starting promptly at 6:30pm. We will adjourn no later than 8:30pm to Brazenhead for the after-meeting.</p>",
     "talks": [
       2
-    ],
-    "description": "<p>Due to the Memorial Day holiday, we will be meeting a week later on June 1. Yes, it is still our May meeting :-D.</p>\r\n\r\n<p>The informal meeting will begin at 6:00pm, with the formal presentation starting promptly at 6:30pm. We will adjourn no later than 8:30pm to Brazenhead for the after-meeting.</p>",
-    "date": "2015-06-01T18:00:00Z"
+    ]
   },
-  "pk": 2
+  "pk": 2,
+  "model": "meetups.meetup"
 },
 {
-  "model": "meetups.meetup",
   "fields": {
-    "meetup_type": 2,
     "location": "<p><a href=\"https://www.google.com/maps/place/Pillar+Technology+Group+LLC/@39.9748601,-82.9976732,15z/data=!4m2!3m1!1s0x0:0xd0c230a717d372f2\">Pillar at the Smith Brother's Building</a></p>",
+    "meetup_type": 2,
+    "date": "2015-08-31T18:00:00Z",
     "title": "August Monthly Meeting",
+    "description": "<p>The informal meeting will begin at 6:00pm, with the formal presentation starting promptly at 6:30pm. We will adjourn no later than 8:30pm to Brazenhead for the after-meeting.</p>",
     "talks": [
       3
-    ],
-    "description": "<p>The informal meeting will begin at 6:00pm, with the formal presentation starting promptly at 6:30pm. We will adjourn no later than 8:30pm to Brazenhead for the after-meeting.</p>",
-    "date": "2015-08-31T18:00:00Z"
+    ]
   },
-  "pk": 3
+  "pk": 3,
+  "model": "meetups.meetup"
 },
 {
-  "model": "meetups.meetup",
   "fields": {
-    "meetup_type": 2,
     "location": "<p><a href=\"https://www.google.com/maps/place/Pillar+Technology+Group+LLC/@39.9748601,-82.9976732,15z/data=!4m2!3m1!1s0x0:0xd0c230a717d372f2\">Pillar at the Smith Brother's Building</a></p>",
+    "meetup_type": 2,
+    "date": "2015-07-27T18:00:00Z",
     "title": "July Monthly Meetup",
+    "description": "<p>The informal meeting will begin at 6:00pm, with the formal presentation starting promptly at 6:30pm. We will adjourn no later than 8:30pm to Brazenhead for the after-meeting.</p>",
     "talks": [
       4
-    ],
-    "description": "<p>The informal meeting will begin at 6:00pm, with the formal presentation starting promptly at 6:30pm. We will adjourn no later than 8:30pm to Brazenhead for the after-meeting.</p>",
-    "date": "2015-07-27T18:00:00Z"
+    ]
   },
-  "pk": 4
+  "pk": 4,
+  "model": "meetups.meetup"
 },
 {
-  "model": "meetups.meetup",
   "fields": {
-    "meetup_type": 2,
     "location": "<p><a href=\"https://www.google.com/maps/place/Pillar+Technology+Group+LLC/@39.9748601,-82.9976732,15z/data=!4m2!3m1!1s0x0:0xd0c230a717d372f2\">Pillar at the Smith Brother's Building</a></p>",
+    "meetup_type": 2,
+    "date": "2015-04-27T18:00:00Z",
     "title": "April Monthly Meeting",
+    "description": "<p>The informal meeting will begin at 6:00pm, with the formal presentation starting promptly at 6:30pm. We will adjourn no later than 8:30pm to Brazenhead for the after-meeting.</p>",
     "talks": [
       5
-    ],
-    "description": "<p>The informal meeting will begin at 6:00pm, with the formal presentation starting promptly at 6:30pm. We will adjourn no later than 8:30pm to Brazenhead for the after-meeting.</p>",
-    "date": "2015-04-27T18:00:00Z"
+    ]
   },
-  "pk": 5
+  "pk": 5,
+  "model": "meetups.meetup"
 }
 ]
