@@ -1,8 +1,5 @@
 from django.shortcuts import get_object_or_404, render
 
-# from django.http import HttpResponse
-# from django.template import RequestContext, loader
-
 from .models import Meetup
 
 
@@ -11,8 +8,10 @@ def home_page(request):
     talks = latest_meetup.talks
     return render(request, 'home.html', {
         'latest_meetup': latest_meetup,
-        'talks': talks,
     })
 
 def index(request):
-    return render(request, 'meetups/index.html',)
+    meetups = Meetup.objects.order_by('-date')[1:]
+    return render(request, 'meetups/index.html', {
+        'meetups': meetups,
+    })

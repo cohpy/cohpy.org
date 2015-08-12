@@ -1,6 +1,8 @@
 import datetime
-from django.utils import timezone
 import pytest
+
+from django.test import Client
+from django.utils import timezone
 
 from meetups.models import Speaker, Talk, MeetupType, Meetup
 
@@ -82,3 +84,8 @@ def meetup3(talk, meetup_type, latest_date):
     m = Meetup.objects.create(**kwargs)
     m.talks.add(talk)
     return m
+
+@pytest.fixture
+def homepage_response(meetup1, meetup2, meetup3, earliest_date, middle_date, latest_date):
+    client = Client()
+    return client.get('/').content.decode()
