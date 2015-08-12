@@ -89,3 +89,8 @@ def meetup3(talk, meetup_type, latest_date):
 def homepage_response(meetup1, meetup2, meetup3, earliest_date, middle_date, latest_date):
     client = Client()
     return client.get('/').content.decode()
+
+@pytest.fixture
+def past_meetups_page_response(meetup1, meetup2, meetup3, earliest_date, middle_date, latest_date):
+    client = Client()
+    return client.get('/meetups/').content.decode()
