@@ -1,0 +1,34 @@
+{% extends 'site_base.html' %}
+
+{% block title%}Past Meetups{% endblock %}
+
+{% block past_meetups_active %}class="active"{% endblock %}
+
+
+{% block content %}
+  <div class="row">
+    <div class="small-12 columns">
+      <h2 class="site-title">The Central Ohio Python User's Group</h2>
+    </div>
+  </div>
+  <div class="row">
+    {% for meetup in meetups %}
+      <div class="small-6 columns">
+        <div class="next-meetup">
+          <h3>{{ meetup.title }}</h3>
+          <p>{{ meetup.date }}</p>
+          {{ meetup.safe_location }}
+          {{ meetup.safe_description }}
+          
+          {% for talk in meetup.talks.all %}
+            <h4>{{ talk.title }}</h4>
+            {% for speaker in talk.speakers.all %}
+              <h5>{{ speaker.name }}</h5>
+            {% endfor %}
+            {{ talk.safe_description }}
+          {% endfor %}
+        </div>
+      </div>  
+    {% endfor %}
+  </div>
+{% endblock %}
