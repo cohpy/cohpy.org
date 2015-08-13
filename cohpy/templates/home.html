@@ -10,8 +10,16 @@
     </div>
   </div>
   <div class="row">
-    <div class="small-6 columns">
-      <div id="next-meetup">
+    <div class="medium-6 columns">
+      <div class="general-info">
+        {{ general_info }}
+      </div>
+      <div class="dojo-info">
+        {{ dojo_info }}
+      </div>  
+    </div>
+    <div class="medium-6 columns">
+      <div class="meetup">
         <h3>{{ latest_meetup.title }}</h3>
         <p>{{ latest_meetup.date }}</p>
         {{ latest_meetup.safe_location }}
@@ -26,5 +34,6 @@
         {% endfor %}
       </div>  
     </div>
+    
   </div>
 {% endblock %}
