@@ -3,7 +3,6 @@ from django.shortcuts import render
 from .models import Meetup
 
 from info_blocks.views import latest_general_info, latest_dojo_info
-import pdb
 
 
 def home_page(request):
