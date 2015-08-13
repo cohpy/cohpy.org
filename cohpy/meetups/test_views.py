@@ -14,6 +14,14 @@ def test_root_url_resolves_to_home_page():
     assert found.func == home_page
 
 @pytest.mark.django_db
+def test_menu_contains_correct_links(homepage_response):
+    assert '<a href="/meetups">Past Meetups</a>' in homepage_response
+    assert '<a href="http://www.pyohio.org/">PyOhio</a>' in homepage_response
+    assert '<a href="https://mail.python.org/pipermail/centraloh/">Mailing List Archives</a>' in homepage_response
+    assert '<a href="/">Resources</a>' in homepage_response
+    assert '<a href="/admin">Login</a>' in homepage_response
+
+@pytest.mark.django_db
 def test_home_page_returns_correct_html(homepage_response):    
     assert '<h3>Test meetup3</h3>' in homepage_response
     assert '<p>July 30, 2015, 6 p.m.</p>' in homepage_response
@@ -25,7 +33,6 @@ def test_home_page_returns_correct_html(homepage_response):
 
 def test_meetups_url_resolves_to_past_meetups_page():
     found = resolve('/meetups/')
-    # pdb.set_trace()
     assert found.view_name == 'index'
 
 @pytest.mark.django_db

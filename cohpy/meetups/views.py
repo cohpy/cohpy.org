@@ -1,6 +1,8 @@
 from django.shortcuts import get_object_or_404, render
 
 from .models import Meetup
+from info_blocks.views import *
+import pdb
 
 
 def home_page(request):
@@ -8,6 +10,8 @@ def home_page(request):
     talks = latest_meetup.talks
     return render(request, 'home.html', {
         'latest_meetup': latest_meetup,
+        'general_info': latest_general_info,
+        'dojo_info': latest_dojo_info,
     })
 
 def index(request):
