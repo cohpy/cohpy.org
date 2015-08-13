@@ -1,7 +1,8 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import render
 
 from .models import Meetup
-from info_blocks.views import *
+
+from info_blocks.views import latest_general_info, latest_dojo_info
 import pdb
 
 

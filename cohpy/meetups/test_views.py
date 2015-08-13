@@ -1,8 +1,6 @@
 import pytest
 
 from django.core.urlresolvers import resolve
-from django.http import HttpRequest
-from django.template.loader import render_to_string
 
 from meetups.views import home_page
 from meetups.pytest_fixtures import *
