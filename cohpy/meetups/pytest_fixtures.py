@@ -1,8 +1,7 @@
-import datetime
-import pytest
-
 from django.test import Client
 from django.utils import timezone
+
+import pytest
 
 from meetups.models import Speaker, Talk, MeetupType, Meetup
 

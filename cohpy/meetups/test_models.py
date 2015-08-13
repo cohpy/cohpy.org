@@ -1,7 +1,6 @@
 from django.utils import timezone
 import pytest
 
-from meetups.models import Speaker, Talk, MeetupType, Meetup
 from meetups.pytest_fixtures import *
 
 
