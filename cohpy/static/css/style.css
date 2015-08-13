@@ -60,6 +60,18 @@ p a:hover {
   background: #F1F1FD;
 }
 
+.meetup-outer:nth-of-type(3n) .meetup {
+  background: #F1F1F1;
+}
+
+.meetup-outer:nth-of-type(3n+1) .meetup {
+  background: #F1F1Fd;
+}
+
+.meetup-outer:nth-of-type(3n+2) .meetup {
+  background: #E2F7CE;
+}
+
 .dojo-info {
   background: #F1F1F1;
 }
