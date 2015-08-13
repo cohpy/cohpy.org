@@ -2,7 +2,7 @@ from django.utils import timezone
 
 import pytest
 
-from info_blocks.models import GeneralInfoBlock, DojoInfoBlock
+from info_blocks.views import *
 
 # For reference: https://pytest.org/latest/fixture.html#fixture
 # http://www.pydanny.com/pytest-no-boilerplate-testing-2.html
@@ -72,3 +72,11 @@ def dojo_info_block3(latest_date):
         'date_added': latest_date
     }
     return DojoInfoBlock.objects.create(**kwargs)
+
+@pytest.fixture
+def latest_general_info_block(general_info_block1, general_info_block2, general_info_block3):
+    return latest_general_info()
+
+@pytest.fixture
+def latest_dojo_info_block(dojo_info_block1, dojo_info_block2, dojo_info_block3):
+    return latest_dojo_info()
