@@ -17,8 +17,21 @@ p a:hover {
 
 .contain-to-grid, .top-bar {
   background: #A5E26D;
-  height: 3.8125rem;
   margin-bottom: 1em;
+}
+
+.contain-to-grid.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.top-bar.expanded .title-area {
+    background: #A5E26D;
+}
+
+body {
+  padding-top: 4.8125rem;
 }
 
 .top-bar {
@@ -101,6 +114,11 @@ p a:hover {
 
   .contain-to-grid .top-bar {
     margin-bottom: 1em;
+    
+  }
+
+  .contain-to-grid.sticky {
+    height: 3.8125rem;
   }
 }
 
