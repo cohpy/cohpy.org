@@ -2,7 +2,8 @@ h1, h2, h3, h4, h5, h6 {
   color: #3E409E;
 }
 
-h2.site-title {
+h2.site-title,
+h3.site-title {
   margin-bottom: 2rem;
 }
 
@@ -96,12 +97,20 @@ body {
   background: #E2F7CE;
 }
 
-table thead {
+table tr:nth-of-type(odd) {
     background: #F1F1Fd;
 }
 
 table tr:nth-of-type(even) {
+    background: #EBF5E2;
+}
+
+table thead tr:nth-of-type(odd) {
     background: #F7E8CE;
+}
+
+td {
+  word-wrap: break-word;
 }
 
 @media only screen and (min-width: 58.75em) {
