@@ -6,13 +6,17 @@ h2.site-title {
   margin-bottom: 2rem;
 }
 
-p a {
+a {
   color: #3E409E;
 }
 
-p a:hover {
+a:hover {
   color: #3E409E;
   text-decoration: underline;
+}
+
+nav a:hover {
+  text-decoration: none;
 }
 
 .contain-to-grid, .top-bar {
@@ -92,6 +96,13 @@ body {
   background: #E2F7CE;
 }
 
+table thead {
+    background: #F1F1Fd;
+}
+
+table tr:nth-of-type(even) {
+    background: #F7E8CE;
+}
 
 @media only screen and (min-width: 58.75em) {
   .top-bar-section li.active:not(.has-form) a:not(.button) {
