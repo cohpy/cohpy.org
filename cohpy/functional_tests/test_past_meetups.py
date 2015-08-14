@@ -15,8 +15,8 @@ def test_navigates_to_past_meetups_page(browser):
     header_text = browser.find_element_by_tag_name('h1').text
     assert 'COhPy' in header_text
 
-    subheader_text = browser.find_element_by_tag_name('h2').text
-    assert "The Central Ohio Python User's Group" in subheader_text
+    subheader_text = browser.find_element_by_tag_name('h3').text
+    assert "The Central Ohio Python User's Group: Past Meetups" in subheader_text
 
     # there is a section that contains the last meetup
     past_meetups = browser.find_elements_by_class_name('meetup')
