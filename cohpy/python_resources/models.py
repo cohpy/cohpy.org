@@ -1,6 +1,6 @@
 from django.db import models
 
-
+import pdb
 class Category(models.Model):
     name = models.CharField(max_length=64)
 
@@ -24,5 +24,15 @@ class PythonResource(models.Model):
 
     class Meta:
         ordering = ('title',)
+
+
+    def comma_separated_categories(self):
+        category_list = []
+        categories = Category.objects.filter(pythonresource__pk=self.id)
+        # pdb.set_trace()
+        for category in categories:
+            category_list.append(category.name)
+        return ', '.join(category_list)
+
 
 

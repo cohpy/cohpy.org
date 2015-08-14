@@ -1,0 +1,44 @@
+{% extends 'site_base.html' %}
+
+{% block title%}Resources{% endblock %}
+
+{% block resources_active %}class="active"{% endblock %}
+
+
+{% block content %}
+  <div class="row">
+    <div class="small-12 columns">
+      <h2 class="site-title">The Central Ohio Python User's Group</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 columns">
+      
+      
+      
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Link</th>
+              <th>Categories</th>
+            </tr>
+          </thead>
+          <tbody>{% for resource in resources %}
+            <tr>
+              <td>{{ resource.title }}</td>
+              <td>{{ resource.description }}</td>
+              <td><a href="{{ resource.link }}">{{ resource.link }}</a></td>
+              <td>
+                  {{ resource.comma_separated_categories }}
+              </td>
+            </tr>{% endfor %}
+          </tbody>
+        </table>
+      
+    
+      
+    </div>
+  </div>
+{% endblock %}
