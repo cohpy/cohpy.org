@@ -1,6 +1,4 @@
 from django.utils import timezone
-import pytest
-import pdb
 
 from .functional_helper import *
 
