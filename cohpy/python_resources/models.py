@@ -18,7 +18,15 @@ class PythonResource(models.Model):
     link = models.TextField(blank=True)
     categories = models.ManyToManyField(Category)
     date_added = models.DateTimeField()
-                
+    
+    def comma_separated_categories(self):
+        category_list = []
+        categories = Category.objects.filter(pythonresource__pk=self.id)
+        # pdb.set_trace()
+        for category in categories:
+            category_list.append(category.name)
+        return ', '.join(category_list)            
+    
     def __str__(self):
         return self.title
 
@@ -26,11 +34,5 @@ class PythonResource(models.Model):
         ordering = ('title',)
 
 
-    def comma_separated_categories(self):
-        category_list = []
-        categories = Category.objects.filter(pythonresource__pk=self.id)
-        # pdb.set_trace()
-        for category in categories:
-            category_list.append(category.name)
-        return ', '.join(category_list)
+    
 

@@ -53,6 +53,7 @@ class Meetup(models.Model):
     location = models.TextField(blank=True)    
     talks = models.ManyToManyField(Talk, blank=True)
     meetup_type = models.ForeignKey(MeetupType)
+    posted_to_meetup = models.BooleanField(default=False)
     
     def safe_description(self):
         return mark_safe(self.description)
