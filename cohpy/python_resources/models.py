@@ -34,5 +34,3 @@ class PythonResource(models.Model):
             category_list.append(category.name)
         return ', '.join(category_list)
 
-
-

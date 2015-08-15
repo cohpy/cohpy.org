@@ -6,9 +6,7 @@
   
   {% for talk in meetup.talks.all %}
     <h4>{{ talk.title }}</h4>
-    {% for speaker in talk.speakers.all %}
-      <h5>{{ speaker.name }}</h5>
-    {% endfor %}
+    <h5>{{ talk.comma_separated_speakers }}</h5>
     {{ talk.safe_description }}
   {% endfor %}
 </div>

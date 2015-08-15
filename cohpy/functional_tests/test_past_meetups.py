@@ -21,9 +21,4 @@ def test_navigates_to_past_meetups_page(browser):
     # there is a section that contains the last meetup
     past_meetups = browser.find_elements_by_class_name('meetup')
     assert len(past_meetups) > 3
-    for meetup in past_meetups:
-        # need to only look at those that are visible
-        #(due to some are hidden depending on screen size)
-        if meetup.text != '':
-            assert 'Monthly Meeting' in meetup.text
 
