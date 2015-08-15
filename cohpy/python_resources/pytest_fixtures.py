@@ -1,3 +1,4 @@
+from django.test import Client
 from django.utils import timezone
 import pytest
 
@@ -66,3 +67,8 @@ def python_resource3(category3):
     r = PythonResource.objects.create(**kwargs)
     r.categories.add(category3)
     return r
+
+@pytest.fixture
+def resources_page_response(python_resource1, python_resource2, python_resource3):
+    client = Client()
+    return client.get('/resources/').content.decode()
