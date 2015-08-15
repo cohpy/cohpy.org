@@ -14,59 +14,20 @@
     <div class="medium-6 columns meetup-left">
       {% for meetup in meetups %}
         {% if forloop.counter0|divisibleby:"2" %}
-          <div class="meetup">
-            <h3>{{ meetup.title }}</h3>
-            <p>{{ meetup.date|date:"F j, Y, g:i a" }}</p>
-            {{ meetup.safe_location }}
-            {{ meetup.safe_description }}
-            
-            {% for talk in meetup.talks.all %}
-              <h4>{{ talk.title }}</h4>
-              {% for speaker in talk.speakers.all %}
-                <h5>{{ speaker.name }}</h5>
-              {% endfor %}
-              {{ talk.safe_description }}
-            {% endfor %}
-          </div>
+          {% include 'partials/_meetup.html' %}
         {% endif %}
       {% endfor %} 
     </div>
     <div class="small-6 columns meetup-right">
       {% for meetup in meetups %}
         {% if not forloop.counter0|divisibleby:"2" %}  
-          <div class="meetup">
-            <h3>{{ meetup.title }}</h3>
-            <p>{{ meetup.date|date:"F j, Y, g:i a" }}</p>
-            {{ meetup.safe_location }}
-            {{ meetup.safe_description }}
-            
-            {% for talk in meetup.talks.all %}
-              <h4>{{ talk.title }}</h4>
-              {% for speaker in talk.speakers.all %}
-                <h5>{{ speaker.name }}</h5>
-              {% endfor %}
-              {{ talk.safe_description }}
-            {% endfor %}
-          </div>
+          {% include 'partials/_meetup.html'%}
         {% endif %}    
       {% endfor %}
     </div>
     <div class="medium-6 columns meetup-mobile">
       {% for meetup in meetups %}        
-        <div class="meetup">
-          <h3>{{ meetup.title }}</h3>
-          <p>{{ meetup.date|date:"F j, Y, g:i a" }}</p>
-          {{ meetup.safe_location }}
-          {{ meetup.safe_description }}
-          
-          {% for talk in meetup.talks.all %}
-            <h4>{{ talk.title }}</h4>
-            {% for speaker in talk.speakers.all %}
-              <h5>{{ speaker.name }}</h5>
-            {% endfor %}
-            {{ talk.safe_description }}
-          {% endfor %}
-        </div>
+        {% include 'partials/_meetup.html' %}
       {% endfor %} 
     </div>
   </div>
