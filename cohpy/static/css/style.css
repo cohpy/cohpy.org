@@ -77,17 +77,36 @@ body {
   background: #F1F1FD;
 }
 
-.meetup-outer:nth-of-type(3n) .meetup {
+.meetup-left .meetup:nth-of-type(3n),
+.meetup-mobile .meetup:nth-of-type(3n) {
   background: #F7E8CE;
 }
 
-.meetup-outer:nth-of-type(3n+1) .meetup {
+.meetup-left .meetup:nth-of-type(3n+1),
+.meetup-mobile .meetup:nth-of-type(3n+1) {
+  background: #F1F1FD;
+}
+
+.meetup-left .meetup:nth-of-type(3n+2),
+.meetup-mobile .meetup:nth-of-type(3n+2) {
+  background: #E2F7CE;
+}
+
+.meetup-right .meetup:nth-of-type(3n+1) {
+  background: #F7E8CE;
+}
+
+.meetup-right .meetup:nth-of-type(3n+2) {
   background: #F1F1Fd;
 }
 
-.meetup-outer:nth-of-type(3n+2) .meetup {
+.meetup-right .meetup:nth-of-type(3n) {
   background: #E2F7CE;
 }
+
+.meetup-mobile {
+  display: none;
+} 
 
 .dojo-info {
   background: #F7E8CE;
@@ -141,8 +160,12 @@ td {
   }
 }
 
-@media only screen and (min-width: 40.0625em) {
-  .container {
-    padding: 0 1rem;
-  }  
+@media only screen and (max-width: 40em) {
+  .meetup-mobile {
+    display: block;
+  }
+
+  .meetup-left, .meetup-right {
+    display: none;
+  }
 }

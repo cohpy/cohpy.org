@@ -6,13 +6,53 @@
 
 {% block content %}
   <div class="row">
-    <div class="small-12 columns">
+    <div class="medium-12 columns">
       <h3 class="site-title">The Central Ohio Python User's Group: Past Meetups</h3>
     </div>
   </div>
   <div class="row">
-    {% for meetup in meetups %}
-      <div class="medium-6 columns meetup-outer">
+    <div class="medium-6 columns meetup-left">
+      {% for meetup in meetups %}
+        {% if forloop.counter0|divisibleby:"2" %}
+          <div class="meetup">
+            <h3>{{ meetup.title }}</h3>
+            <p>{{ meetup.date }}</p>
+            {{ meetup.safe_location }}
+            {{ meetup.safe_description }}
+            
+            {% for talk in meetup.talks.all %}
+              <h4>{{ talk.title }}</h4>
+              {% for speaker in talk.speakers.all %}
+                <h5>{{ speaker.name }}</h5>
+              {% endfor %}
+              {{ talk.safe_description }}
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endfor %} 
+    </div>
+    <div class="small-6 columns meetup-right">
+      {% for meetup in meetups %}
+        {% if not forloop.counter0|divisibleby:"2" %}  
+          <div class="meetup">
+            <h3>{{ meetup.title }}</h3>
+            <p>{{ meetup.date }}</p>
+            {{ meetup.safe_location }}
+            {{ meetup.safe_description }}
+            
+            {% for talk in meetup.talks.all %}
+              <h4>{{ talk.title }}</h4>
+              {% for speaker in talk.speakers.all %}
+                <h5>{{ speaker.name }}</h5>
+              {% endfor %}
+              {{ talk.safe_description }}
+            {% endfor %}
+          </div>
+        {% endif %}    
+      {% endfor %}
+    </div>
+    <div class="medium-6 columns meetup-mobile">
+      {% for meetup in meetups %}        
         <div class="meetup">
           <h3>{{ meetup.title }}</h3>
           <p>{{ meetup.date }}</p>
@@ -27,7 +67,7 @@
             {{ talk.safe_description }}
           {% endfor %}
         </div>
-      </div>  
-    {% endfor %}
+      {% endfor %} 
+    </div>
   </div>
 {% endblock %}

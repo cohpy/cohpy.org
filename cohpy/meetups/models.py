@@ -44,7 +44,7 @@ class Meetup(models.Model):
     description = models.TextField(blank=True)
     date = models.DateTimeField()
     location = models.TextField(blank=True)    
-    talks = models.ManyToManyField(Talk)
+    talks = models.ManyToManyField(Talk, blank=True)
     meetup_type = models.ForeignKey(MeetupType)
     
     def safe_description(self):

@@ -19,20 +19,22 @@
       </div>  
     </div>
     <div class="medium-6 columns">
-      <div class="meetup">
-        <h3>{{ latest_meetup.title }}</h3>
-        <p>{{ latest_meetup.date }}</p>
-        {{ latest_meetup.safe_location }}
-        {{ latest_meetup.safe_description }}
-        
-        {% for talk in latest_meetup.talks.all %}
-          <h4>{{ talk.title }}</h4>
-          {% for speaker in talk.speakers.all %}
-            <h5>{{ speaker.name }}</h5>
+      {% for meetup in latest_meetups %}
+        <div class="meetup">
+          <h3>{{ meetup.title }}</h3>
+          <p>{{ meetup.date }}</p>
+          {{ meetup.safe_location }}
+          {{ meetup.safe_description }}
+          
+          {% for talk in meetup.talks.all %}
+            <h4>{{ talk.title }}</h4>
+            {% for speaker in talk.speakers.all %}
+              <h5>{{ speaker.name }}</h5>
+            {% endfor %}
+            {{ talk.safe_description }}
           {% endfor %}
-          {{ talk.safe_description }}
-        {% endfor %}
-      </div>  
+        </div>
+      {% endfor %}  
     </div>
     
   </div>
