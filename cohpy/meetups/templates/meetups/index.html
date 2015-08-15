@@ -16,7 +16,7 @@
         {% if forloop.counter0|divisibleby:"2" %}
           <div class="meetup">
             <h3>{{ meetup.title }}</h3>
-            <p>{{ meetup.date }}</p>
+            <p>{{ meetup.date|date:"F j, Y, g:i a" }}</p>
             {{ meetup.safe_location }}
             {{ meetup.safe_description }}
             
@@ -36,7 +36,7 @@
         {% if not forloop.counter0|divisibleby:"2" %}  
           <div class="meetup">
             <h3>{{ meetup.title }}</h3>
-            <p>{{ meetup.date }}</p>
+            <p>{{ meetup.date|date:"F j, Y, g:i a" }}</p>
             {{ meetup.safe_location }}
             {{ meetup.safe_description }}
             
@@ -55,7 +55,7 @@
       {% for meetup in meetups %}        
         <div class="meetup">
           <h3>{{ meetup.title }}</h3>
-          <p>{{ meetup.date }}</p>
+          <p>{{ meetup.date|date:"F j, Y, g:i a" }}</p>
           {{ meetup.safe_location }}
           {{ meetup.safe_description }}
           

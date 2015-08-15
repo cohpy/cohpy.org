@@ -1,6 +1,7 @@
 from django.test import Client
 from django.utils import timezone
 
+from datetime import timedelta
 import pytest
 
 from meetups.models import Speaker, Talk, MeetupType, Meetup
@@ -10,22 +11,26 @@ from meetups.models import Speaker, Talk, MeetupType, Meetup
 # http://www.pydanny.com/pytest-no-boilerplate-testing-2.html
 
 @pytest.fixture
-def earliest_date():
-    return '2015-06-01 18:00'
+def now_date():
+    return timezone.now() 
 
 @pytest.fixture
-def middle_date():
-    return '2015-06-29 18:00'
+def earliest_date(now_date):
+    return (now_date + timedelta(days=-40))
 
 @pytest.fixture
-def latest_date():
-    return '2015-07-30 18:00'
+def middle_date(now_date):
+    return (now_date + timedelta(days=-10))
 
 @pytest.fixture
-def speaker():
+def latest_date(now_date):
+    return (now_date + timedelta(days=10))
+
+@pytest.fixture
+def speaker(earliest_date):
     kwargs = {
         'name': 'Test User',
-        'date_added': timezone.now()
+        'date_added': earliest_date
     }
     return Speaker.objects.create(**kwargs)
 
