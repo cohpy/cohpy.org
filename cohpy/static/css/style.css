@@ -1,5 +1,5 @@
 h1, h2, h3, h4, h5, h6 {
-  color: #3E409E;
+  color: #5D5FB9;
 }
 
 h2.site-title,
@@ -9,11 +9,28 @@ h3.site-title {
 
 a {
   color: #3E409E;
+  text-decoration: underline;
 }
 
 a:hover {
   color: #3E409E;
-  text-decoration: underline;
+  text-decoration: none;
+}
+
+button, .button {
+  background-color: #6062B7;
+  border-color: #6062B7;
+  border-radius: 3px;
+  margin: 0;
+  padding: 8px;
+}
+
+button:hover, button:focus, .button:hover, .button:focus {
+  background-color: #343688;
+}
+
+nav a {
+  text-decoration: none;
 }
 
 nav a:hover {
@@ -48,11 +65,11 @@ body {
 }
 
 .top-bar-section li:not(.has-form) a:not(.button) {
-  background: #A5E26D
+  background: #A5E26D;
 }
 
 .top-bar-section li:not(.has-form) a:not(.button):hover {
-  background: #A5E26D
+  background: #A5E26D;
 }
 
 .top-bar .name h1 {
@@ -134,7 +151,7 @@ td {
 
 @media only screen and (min-width: 58.75em) {
   .top-bar-section li.active:not(.has-form) a:not(.button) {
-    background: #3E409E;
+    background: #6062B7;
     color: #FFFFFF;
     line-height: 2.8125rem;
     padding: 0 0.9375rem;
@@ -146,8 +163,7 @@ td {
   }
 
   .top-bar-section li.active:not(.has-form) a:not(.button):hover {
-    background: #6062B1;
-    background: #343688;
+    background: #6062B7;
   }
 
   .contain-to-grid .top-bar {

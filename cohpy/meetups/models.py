@@ -22,6 +22,13 @@ class Talk(models.Model):
         '''http://stackoverflow.com/questions/2080559/disable-html-escaping-in-djangos-textfield''' 
         return mark_safe(self.description)
 
+    def comma_separated_speakers(self):
+        speaker_list = []
+        speakers = Speaker.objects.filter(talk__pk=self.id)
+        for speaker in speakers:
+            speaker_list.append(speaker.name)
+        return ', '.join(speaker_list)
+
     def __str__(self):
         return self.title
 
@@ -46,12 +53,13 @@ class Meetup(models.Model):
     location = models.TextField(blank=True)    
     talks = models.ManyToManyField(Talk, blank=True)
     meetup_type = models.ForeignKey(MeetupType)
+    posted_to_meetup = models.BooleanField(default=False)
     
     def safe_description(self):
         return mark_safe(self.description)
 
     def safe_location(self):
-        return mark_safe(self.location)    
+        return mark_safe(self.location)  
     
     def __str__(self):
         return self.title

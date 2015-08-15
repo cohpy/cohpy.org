@@ -1,6 +1,4 @@
 from django.utils import timezone
-import pytest
-import pdb
 
 from .functional_helper import *
 
@@ -20,8 +18,8 @@ def test_navigates_to_home_page(browser):
     subheader_text = browser.find_element_by_tag_name('h2').text
     assert "The Central Ohio Python User's Group" in subheader_text
 
-    next_meetup_text = browser.find_element_by_class_name('meetup').text
-    assert 'Monthly Meeting' in next_meetup_text
+    next_meetups = browser.find_elements_by_class_name('meetup')
+    assert len(next_meetups) >= 1
    
     general_info_text = browser.find_element_by_class_name('general-info').text
     assert 'About Us' in general_info_text

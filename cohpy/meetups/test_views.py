@@ -25,7 +25,6 @@ def test_menu_contains_correct_links(homepage_response):
 @pytest.mark.django_db
 def test_home_page_returns_correct_html(homepage_response, latest_date):    
     assert '<h3>Test meetup3</h3>' in homepage_response
-    # pdb.set_trace()
     assert date_string(latest_date) in homepage_response
     assert '<p>Test meetup3 location</p>' in homepage_response
     assert '<p>Test meetup3 description</p>' in homepage_response
@@ -40,7 +39,6 @@ def test_meetups_url_resolves_to_past_meetups_page():
 @pytest.mark.django_db
 def test_past_meetups_page_returns_correct_html(past_meetups_page_response, earliest_date, middle_date, latest_date):
     assert '<h3>Test meetup1</h3>' in past_meetups_page_response
-    # pdb.set_trace()
     assert date_string(earliest_date) in past_meetups_page_response
     assert '<p>Test meetup1 location</p>' in past_meetups_page_response
     assert '<p>Test meetup1 description</p>' in past_meetups_page_response
