@@ -4,6 +4,7 @@ from .base import *
 # SECRET_KEY, can put explicit path into the following
 # https://github.com/joke2k/django-environ
 
-environ.Env.read_env() # reading .env file
+env = environ.Env(DEBUG=(bool, False),) # set default values and casting
+environ.Env.read_env(ROOT_DIR - 1) # reading .env file
 
 SECRET_KEY = env('SECRET_KEY')
