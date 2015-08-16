@@ -14,6 +14,8 @@ APPS_DIR = ROOT_DIR
 
 env = environ.Env(DEBUG=(bool, False),) # set default values and casting
 
+DATABASES = {'default': {}}
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
