@@ -7,3 +7,5 @@ from .base import *
 environ.Env.read_env("/home/web/dev/cohpy.org/.env") # reading .env file
 
 SECRET_KEY = env('SECRET_KEY')
+
+ALLOWED_HOSTS = ['*']
