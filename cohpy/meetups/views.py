@@ -7,9 +7,11 @@ from info_blocks.views import latest_general_info, latest_dojo_info
 
 
 def home_page(request):
-    latest_meetups = Meetup.objects.filter(meetup_type__name='monthly').filter(date__gte=timezone.now()).order_by('date')
+    upcoming_meetups = Meetup.objects.filter(meetup_type__name='monthly').filter(date__gte=timezone.now()).order_by('date')
+    last_meetup = Meetup.objects.filter(meetup_type__name='monthly').latest('date')
     return render(request, 'home.html', {
-        'latest_meetups': latest_meetups,
+        'upcoming_meetups': upcoming_meetups,
+        'last_meetup': last_meetup,
         'general_info': latest_general_info,
         'dojo_info': latest_dojo_info,
     })

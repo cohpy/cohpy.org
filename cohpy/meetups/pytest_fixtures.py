@@ -95,6 +95,11 @@ def homepage_response(meetup1, meetup2, meetup3, earliest_date, middle_date, lat
     return client.get('/').content.decode()
 
 @pytest.fixture
+def homepage_response_without_upcoming_meetup(meetup1, meetup2, earliest_date, middle_date):
+    client = Client()
+    return client.get('/').content.decode()
+
+@pytest.fixture
 def past_meetups_page_response(meetup1, meetup2, meetup3, earliest_date, middle_date, latest_date):
     client = Client()
     return client.get('/meetups/').content.decode()

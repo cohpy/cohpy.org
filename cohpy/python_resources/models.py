@@ -22,7 +22,6 @@ class PythonResource(models.Model):
     def comma_separated_categories(self):
         category_list = []
         categories = Category.objects.filter(pythonresource__pk=self.id)
-        # pdb.set_trace()
         for category in categories:
             category_list.append(category.name)
         return ', '.join(category_list)            

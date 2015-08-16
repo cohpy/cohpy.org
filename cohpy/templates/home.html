@@ -19,9 +19,13 @@
       </div>  
     </div>
     <div class="medium-6 columns">
-      {% for meetup in latest_meetups %}
-        {% include 'partials/_meetup.html' %}
-      {% endfor %}  
+      {% if upcoming_meetups %}
+        {% for meetup in upcoming_meetups %}
+          {% include 'partials/_meetup.html' %}
+        {% endfor %}
+      {% else %}
+        {% include 'partials/_meetup.html' with meetup=last_meetup %}
+      {% endif %}
     </div>
   </div>
 {% endblock %}
