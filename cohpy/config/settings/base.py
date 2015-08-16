@@ -12,7 +12,7 @@ import environ
 ROOT_DIR = environ.Path(__file__) - 3  # (/a/b/myfile.py - 3 = /)
 APPS_DIR = ROOT_DIR
 
-env = environ.Env()
+env = environ.Env(DEBUG=(bool, False),) # set default values and casting
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
