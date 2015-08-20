@@ -101,7 +101,7 @@ TEMPLATES = [
 # See: http://django-crispy-forms.readthedocs.org/en/latest/install.html#template-packs
 # CRISPY_TEMPLATE_PACK = 'foundation-5'
 
-WSGI_APPLICATION = 'config.wsgi.application'
+WSGI_APPLICATION = 'wsgi.application'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
