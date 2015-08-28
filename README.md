@@ -53,6 +53,11 @@ To create fixture data to be used in tests:
 $ python manage.py dumpdata meetups python_resources info_blocks --indent 2 > fixtures/testdata.json
 ```
 
+### Production setup
+
+To setup the system to run in a production environment, or recreate how it is running in production today,
+please follow the instructions and use the files provided in the ```prod_setup``` directory.
+
 ### References:
 
 pytest-django documentation - https://pytest-django.readthedocs.org/en/latest/index.html

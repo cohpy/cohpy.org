@@ -1,0 +1,16 @@
+server {
+    listen 80;
+    server_name dev.cohpy.org cohpy.org www.cohpy.org;
+
+    root /;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        alias /home/web/dev/cohpy.org/cohpy/staticfiles/;
+    }
+
+    location / {
+        include         uwsgi_params;
+        uwsgi_pass      unix:/home/web/dev/cohpy.org/cohpy/cohpy.sock;
+    }
+}

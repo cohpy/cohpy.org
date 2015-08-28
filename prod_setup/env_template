@@ -1,0 +1,9 @@
+# This line is commented to force you to set a secret key of your own.
+# Uncomment this line and put a secret key of your choosing here:
+# SECRET_KEY='{your secret key here}'
+BROWSER='HEADLESS'
+
+DATABASES['default']['ENGINE']='django.db.backends.postgresql_psycopg2'
+DATABASES['default']['NAME']='cohpy'
+DATABASES['default']['USER']='postgres'
+DATABASE_URL='postgres:///cohpy'
