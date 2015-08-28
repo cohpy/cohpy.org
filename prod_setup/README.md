@@ -72,10 +72,10 @@ Set up the environment file by copying env_template in this directory to the roo
 
 ```
 # cp env_template {root of this repo}/.env
-# vi .env
+# vi .env (or the editor of your choice)
 ```
 
-And set up your SECRET_KEY.
+Edit the .env file and uncomment the SECRET_KEY line and change the key to whatever you would like.
 
 Build the database and the static folders.
 
