@@ -2,6 +2,11 @@
 
 # COhPy.org website&nbsp;&nbsp;&nbsp;![](https://travis-ci.org/cohpy/cohpy.org.svg?branch=master)
 
+Install postgres database `sudo apt-get install postgresql`
+
+Install python-dev libraries `sudo apt-get install python3-dev`
+
+
 In order to develop locally, please set a ```SECRET_KEY``` and ```BROWSER``` in your .bash_profile (If ```BROWSER='HEADLESS'```, then the functional tests will run with PhantomJS, otherwise they default to Firefox:
 
 ```
