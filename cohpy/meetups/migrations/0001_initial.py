@@ -59,7 +59,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='meetup',
             name='meetup_type',
-            field=models.ForeignKey(to='meetups.MeetupType'),
+            field=models.ForeignKey(
+                to='meetups.MeetupType',
+                related_name='meetups',
+                on_delete=models.deletion.CASCADE
+            ),
         ),
         migrations.AddField(
             model_name='meetup',
