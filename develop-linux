@@ -1,0 +1,54 @@
+#!/bin/bash
+
+VIRTUAL_ENV_PATH="../cohpy.org-venv"
+
+create_virtual_environment() {
+  echo "* Creating virtual environment $VIRTUAL_ENV_PATH"
+  if ! python3 -m venv $VIRTUAL_ENV_PATH; then
+    echo "Unable to create virtual environment"
+    exit 2
+  fi
+}
+
+activate_virtual_environment() {
+  echo "* Activating virtual environment"
+  source "$VIRTUAL_ENV_PATH/bin/activate"
+}
+
+install_requirements(){
+  echo "* Installing requirements"
+  pip install -r requirements.txt
+}
+
+if [[ "$PWD" != */cohpy.org ]]; then
+  echo "You need to be in the cohpy.org directory to run this script" >&2
+  exit 1
+fi
+
+if [[ "$1" == "setup" ]]; then
+  echo "setup"
+  if [[ ! -d $VIRTUAL_ENV_PATH ]]; then
+    create_virtual_environment
+  fi
+
+  activate_virtual_environment
+  install_requirements
+  exit 0
+fi
+
+
+if [ "$1" == "develop" ]; then
+  echo "develop"
+  activate_virtual_environment
+
+fi
+
+if [ "$1" == "run" ]; then
+  echo "run"
+fi
+
+if [ "$1" == "test" ]; then
+  echo "test"
+fi
+
+
